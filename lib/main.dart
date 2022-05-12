@@ -230,8 +230,56 @@ class SixtRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Seventh()),
+        );
+      },
       child: Image(
         image: AssetImage('assets/6.png'),
+        fit: BoxFit.cover,
+        height: double.infinity,
+        width: double.infinity,
+        alignment: Alignment.center,
+      ),
+    ));
+  }
+}
+
+class Seventh extends StatelessWidget {
+  const Seventh({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Eight()),
+        );
+      },
+      child: Image(
+        image: AssetImage('assets/13.png'),
+        fit: BoxFit.cover,
+        height: double.infinity,
+        width: double.infinity,
+        alignment: Alignment.center,
+      ),
+    ));
+  }
+}
+
+class Eight extends StatelessWidget {
+  const Eight({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: GestureDetector(
+      child: Image(
+        image: AssetImage('assets/fin.png'),
         fit: BoxFit.cover,
         height: double.infinity,
         width: double.infinity,
